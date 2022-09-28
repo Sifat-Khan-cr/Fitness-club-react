@@ -8,6 +8,7 @@ function App() {
     <div className="grid grid-cols-4">
       <div className='col-span-3'>
         <Header></Header>
+        <h1 className='text-3xl'>Select Today's Activity</h1>
         <Activities></Activities>
 
 
