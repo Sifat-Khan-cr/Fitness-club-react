@@ -1,7 +1,8 @@
 import React from 'react';
 import Personal from '../Personal/Personal';
 
-const Info = () => {
+const Info = (props) => {
+    const { time } = props;
     return (
         <div className='mt-10'>
             <Personal></Personal>
@@ -20,7 +21,7 @@ const Info = () => {
                 <h1 className='text-4xl mt-10 mb-5'>Details</h1>
                 <div className='flex flex-row justify-evenly items-center rounded-lg bg-cyan-100 p-5 mx-10'>
                     <h1 className='text-2xl block'>Exercise time :</h1>
-                    <p className='text-xl'>00 min</p>
+                    <p className='text-xl'>{time} min</p>
 
                 </div>
 
@@ -36,6 +37,7 @@ const Info = () => {
 
 
             </div>
+            <button className="btn btn-primary w-6/12 my-10">Start Now</button>
 
 
 

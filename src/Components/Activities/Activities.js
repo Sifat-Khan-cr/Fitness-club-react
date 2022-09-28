@@ -1,7 +1,8 @@
 import React from 'react';
 import Activity from '../Activity/Activity';
 
-const Activities = () => {
+const Activities = (props) => {
+    const { handleClick } = props
     const activities = [
         { id: 1, age: "any", name: 'Jogging', time: 20, image: 'https://i.cdn.newsbytesapp.com/images/l21020210525153846.jpeg' },
         { id: 2, age: "any", name: 'Dancing', time: 40, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFdKIGgqmN9bhTIKlW4fvNjGjMUB_mktO5cw&usqp=CAU' },
@@ -18,7 +19,7 @@ const Activities = () => {
         <div className='grid grid-cols-3 gap-4 mx-10'>
             {
                 activities.map(activity => <Activity key={activity.id}
-                    activity={activity}></Activity>)
+                    activity={activity} handleClick={handleClick}></Activity>)
             }
 
 
