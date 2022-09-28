@@ -1,14 +1,17 @@
 import React from 'react';
 
 const Activity = (props) => {
-    const { name, id, age, image, time } = props.activity;
+    const { name, age, image, time } = props.activity;
     return (
-        <div className='flex flex-col bg-red-200 '>
-            <img src={image} alt="" />
-            <h1>name :{name}</h1>
-            <h1>Age :{age}</h1>
-            <h1>Time :{time} sec</h1>
+        <div className="card bg-base-100 shadow-xl p-2">
+            <img src={image} alt="" className="rounded-xl w-full h-64" />
 
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">{name}</h2>
+                <p>Age : {age}</p>
+                <p>Time : {time} min</p>
+                <button className="btn btn-primary w-full">Add Now</button>
+            </div>
         </div>
     );
 };
