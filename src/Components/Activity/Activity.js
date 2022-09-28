@@ -10,7 +10,7 @@ const Activity = (props) => {
                 <h2 className="card-title">{name}</h2>
                 <p>Age : {age}</p>
                 <p>Time : {time} min</p>
-                <button className="btn btn-primary w-full">Add Now</button>
+                <button className="btn btn-primary w-full">Start Now</button>
             </div>
         </div>
     );

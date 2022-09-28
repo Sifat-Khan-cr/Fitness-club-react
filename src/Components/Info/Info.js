@@ -1,9 +1,11 @@
 import React from 'react';
+import Personal from '../Personal/Personal';
 
 const Info = () => {
     return (
-        <div>
-            <h1 className='bg-blue-200'>This is info</h1>
+        <div className='mt-10'>
+            <Personal></Personal>
+
 
         </div>
     );

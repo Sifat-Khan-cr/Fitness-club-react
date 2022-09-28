@@ -15,7 +15,7 @@ const Activities = () => {
     ]
     // console.log(activities);
     return (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-3 gap-4 mx-10'>
             {
                 activities.map(activity => <Activity key={activity.id}
                     activity={activity}></Activity>)

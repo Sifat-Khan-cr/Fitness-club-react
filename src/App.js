@@ -5,10 +5,10 @@ import Info from './Components/Info/Info';
 
 function App() {
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-4 text-center mx-10">
       <div className='col-span-3'>
         <Header></Header>
-        <h1 className='text-3xl'>Select Today's Activity</h1>
+        <h1 className='text-5xl font-semibold mb-10'>Start Today's Activity</h1>
         <Activities></Activities>
 
 
