@@ -1,4 +1,5 @@
 import React from 'react';
+import Activity from '../Activity/Activity';
 
 const Activities = () => {
     const activities = [
@@ -14,13 +15,14 @@ const Activities = () => {
     ]
     // console.log(activities);
     return (
-        <div className='bg-red-200 '>
+        <div className='grid grid-cols-3 gap-4'>
             {
-                activities.map(activity => console.log(activity))
+                activities.map(activity => <Activity key={activity.id}
+                    activity={activity}></Activity>)
             }
 
 
-        </div>
+        </div >
     );
 };
 
