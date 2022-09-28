@@ -12,16 +12,16 @@ function App() {
     setTime(time + product)
   }
   return (
-    <div className="grid grid-cols-4 text-center mx-10">
-      <div className='col-span-3'>
+    <div className="grid grid-cols-1 text-center mx-10 md:grid-cols-3 lg:grid-cols-4 ">
+      <div className='col-span-1 md:col-span-2 lg:col-span-3'>
         <Header></Header>
-        <h1 className='text-5xl font-semibold mb-10'>Start Today's Activity{time}</h1>
+        <h1 className='text-xl md:text-3xl lg:text-6xl font-semibold mb-10'>Start Today's Activity</h1>
         <Activities handleClick={handleClick}></Activities>
 
 
       </div>
 
-      <div className='col-span-1'>
+      <div className='md:col-span-1 flex'>
         <Info time={time}></Info>
 
       </div>

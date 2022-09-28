@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Personal from '../Personal/Personal';
 
 const Info = (props) => {
     const { time } = props;
+    const [brea, setBreak] = useState(0);
+
+    const breakHandler = (data) => {
+        setBreak(data);
+    }
     return (
-        <div className='mt-10'>
+        <div className='lg:mt-10'>
             <Personal></Personal>
-            <div>
+            <div className='hidden lg:grid'>
                 <h1 className='text-4xl mt-10 mb-5'>Add a break</h1>
                 <div className='flex flex-row rounded-lg justify-evenly bg-cyan-100 p-5 mx-10'>
-                    <button className='btn btn-circle'>10s</button>
-                    <button className='btn btn-circle'>20s</button>
-                    <button className='btn btn-circle'>30s</button>
-                    <button className='btn btn-circle'>40s</button>
-                    <button className='btn btn-circle'>50s</button>
+                    <button onClick={() => breakHandler(10)} className='btn btn-circle'>10s</button>
+                    <button onClick={() => breakHandler(20)} className='btn btn-circle'>20s</button>
+                    <button onClick={() => breakHandler(30)} className='btn btn-circle'>30s</button>
+                    <button onClick={() => breakHandler(40)} className='btn btn-circle'>40s</button>
+                    <button onClick={() => breakHandler(50)} className='btn btn-circle'>50s</button>
                 </div>
             </div>
 
@@ -31,7 +36,7 @@ const Info = (props) => {
                 <h1 className='text-4xl mt-10 mb-5'>Break</h1>
                 <div className='flex flex-row justify-evenly items-center rounded-lg bg-cyan-100 p-5 mx-10'>
                     <h1 className='text-2xl block'>Break time :</h1>
-                    <p className='text-xl'>00 sec</p>
+                    <p className='text-xl'>{brea} sec</p>
 
                 </div>
 
