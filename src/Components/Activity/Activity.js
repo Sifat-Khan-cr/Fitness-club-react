@@ -11,7 +11,7 @@ const Activity = (props) => {
                 <h2 className="card-title">{name}</h2>
                 <p>Age : {age}</p>
                 <p>Time : {time} min</p>
-                <button onClick={() => handleClick(time)} className="btn btn-primary w-full">Start Now</button>
+                <button onClick={() => handleClick(time)} className="btn btn-primary bg-cyan-500 w-full">Start Now</button>
             </div>
         </div>
     );
