@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Personal from '../Personal/Personal';
+import Toast from '../Toast/Toast';
 
 const Info = (props) => {
     const { time } = props;
@@ -51,9 +52,7 @@ const Info = (props) => {
 
 
             </div>
-            <button className="btn btn-primary w-6/12 my-10">Start Now</button>
-
-
+            <Toast></Toast>
 
         </div>
     );
