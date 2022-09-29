@@ -3,10 +3,19 @@ import Personal from '../Personal/Personal';
 
 const Info = (props) => {
     const { time } = props;
-    const [brea, setBreak] = useState(0);
+    const bookMark = JSON.parse(localStorage.getItem('break'));
+    const [brea, setBreak] = useState(() => {
+        if (bookMark) {
+            return bookMark;
+        } else {
+            return 0;
+        }
 
+    });
     const breakHandler = (data) => {
         setBreak(data);
+        localStorage.setItem('break', JSON.stringify(data));
+
     }
     return (
         <div className='lg:mt-10'>

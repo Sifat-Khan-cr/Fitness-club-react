@@ -14,7 +14,7 @@ function App() {
   }
   return (
     <div >
-      <div className="grid grid-cols-1 text-center mx-10 md:grid-cols-3 lg:grid-cols-4 ">
+      <div className="grid grid-cols-1 text-center mx-10 md:grid-cols-3 lg:grid-cols-4">
         <div className='col-span-1 md:col-span-3 lg:col-span-3'>
           <Header></Header>
           <h1 className='text-xl md:text-3xl lg:text-6xl font-semibold mb-10'>Start Today's Activity</h1>
